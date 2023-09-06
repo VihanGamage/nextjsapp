@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-//const {Schema} = mongoose
-
 const postSchema = new mongoose.Schema({
     id:{
         type: String,
@@ -20,4 +18,3 @@ if (mongoose.models.Post){
 }
 
 export default Post;
-//export default mongoose.model("Post",postSchema);
