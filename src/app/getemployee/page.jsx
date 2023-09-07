@@ -1,6 +1,8 @@
 
 async function getData(){
-    const res=await fetch("http://localhost:3000/api/posts")
+    const res=await fetch("http://localhost:3000/api/posts",{
+        cache:"no-store",
+    });
     if (!res.ok){
         throw new Error("failed")
     }
@@ -9,14 +11,15 @@ async function getData(){
 
 async function GetEmployee(){
     const data=await getData()
+    console.log("data")
 
     return(
         <div className="container">
             <table>
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>name</th>
+                    <th>ID</th>
+                    <th>NAME</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import {NextResponse} from "next/server";
 
-const AddEmployee = () => {
+const DeleteEmployee = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const id = e.target[0].value
-        const name = e.target[1].value
-        const res = await fetch("/api/posts", {
-            method: 'POST',
+        console.log(id)
+        const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+            method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -18,17 +18,15 @@ const AddEmployee = () => {
                 name
             }),
         });
-        console.log()
-        }
+    }
 
     return(
         <div>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="id" required />
-                <input type="text" placeholder="name" required/>
-                <button type="submit">Add Employee</button>
+                <button type="submit">Delete Employee</button>
             </form>
         </div>
     )
 }
-export default AddEmployee
+export default DeleteEmployee
