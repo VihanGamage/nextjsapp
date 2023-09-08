@@ -1,4 +1,5 @@
 "use client"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from "react";
 import {NextResponse} from "next/server";
 
@@ -22,11 +23,11 @@ const EditEmployee = () => {
     }
 
     return(
-        <div>
+        <div className="">
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="id" required />
                 <input type="text" placeholder="name" required/>
-                <button type="submit">Edit Employee</button>
+                <button className={"btn btn-primary m-3"} type="submit">Edit Employee</button>
             </form>
         </div>
     )

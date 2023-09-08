@@ -26,7 +26,7 @@ const AddEmployee = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="id" required />
                 <input type="text" placeholder="name" required/>
-                <button type="submit">Add Employee</button>
+                <button className={"btn btn-primary m-3"} type="submit">Add Employee</button>
             </form>
         </div>
     )

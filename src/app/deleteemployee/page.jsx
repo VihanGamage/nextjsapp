@@ -24,7 +24,7 @@ const DeleteEmployee = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="id" required />
-                <button type="submit">Delete Employee</button>
+                <button className={"btn btn-primary m-3"} type="submit">Delete Employee</button>
             </form>
         </div>
     )

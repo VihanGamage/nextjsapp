@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 async function getData(){
     const res=await fetch("http://localhost:3000/api/posts",{
@@ -14,19 +15,19 @@ async function GetEmployee(){
     console.log("data")
 
     return(
-        <div className="container">
-            <table>
+        <div>
+            <table className={"m-5"}>
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
+                    <th className={"fs-4"}>ID</th>
+                    <th className={"fs-4"}>NAME</th>
                 </tr>
                 </thead>
                 <tbody>
                 {data.map(user => (
                     <tr key={user.id}>
-                        <td>{user.id}</td>
-                        <td>{user.name}</td>
+                        <td className={"text-danger fs-5"}>{user.id}</td>
+                        <td className={"text-primary fs-5"}>{user.name}</td>
                     </tr>
                 ))}
                 </tbody>
