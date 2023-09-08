@@ -18,6 +18,7 @@ const DeleteEmployee = () => {
                 name
             }),
         });
+        alert("employee deleted")
     }
 
     return(

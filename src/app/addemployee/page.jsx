@@ -18,7 +18,7 @@ const AddEmployee = () => {
                 name
             }),
         });
-        console.log()
+        alert("employee added")
         }
 
     return(

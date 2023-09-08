@@ -20,6 +20,7 @@ const EditEmployee = () => {
                 name
             }),
         });
+        alert("employee edited")
     }
 
     return(
