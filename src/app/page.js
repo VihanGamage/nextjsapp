@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
 
 export default function Home() {
+
   return (
     <div>
       <div className={"col text-center mb-5 mt-5"}>

@@ -1,17 +1,11 @@
-"use client";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Link from "next/link";
-//import { signIn, signOut, useSession } from "next-auth/react";
-
-export default function Navbar() {
-   // const { status } = useSession();
+import React from "react";
+import SignInButton from "./SignInButton";
+const Navbar = () => {
     return (
-        <div>
-            <Link href={"/"}>
-                Home
-            </Link>
-            <button onClick={() => signOut()}>Sign Out</button>
-
-        </div>
+        <header className={"flex gap-4 p-4 bg-gradient-to-b from-white to-gray-200 shadow"}>
+            <SignInButton />
+        </header>
     );
-}
+};
+
+export default Navbar;
