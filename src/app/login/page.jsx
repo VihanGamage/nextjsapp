@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
-import page from "@/app/addemployee/page";
 import Home from "@/app/page";
+
 const Login = () => {
     const { data: session } = useSession();
 
